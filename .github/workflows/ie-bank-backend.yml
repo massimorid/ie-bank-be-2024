@@ -12,6 +12,7 @@ permissions:
 
 env:
   BACKEND_WEBAPP_DEV: mridella-be-dev
+  BACKEND_WEBAPP_UAT: mridella-be-uat
 
 jobs:
   build:
