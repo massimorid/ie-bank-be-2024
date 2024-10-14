@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build, deploy-dev]
     environment:
-      name: 'uat' 
+      name: 'UAT' 
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -98,6 +98,6 @@ jobs:
       uses: azure/webapps-deploy@v3
       id: deploy-to-webapp
       with:
-        app-name: ${{ env.BACKEND_WEBAPP_DEV }}
+        app-name: ${{ env.BACKEND_WEBAPP_UAT }}
         package: .
     
